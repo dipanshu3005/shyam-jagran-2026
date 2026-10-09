@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://guptas-khatu-shyam-jagran-2026.dipanshugupta3005.chatgpt.site";
@@ -46,7 +47,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hi">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
